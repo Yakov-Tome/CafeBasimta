@@ -1,14 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/ui/Navbar";
+import { Rubik, Varela_Round } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const fontSans = Rubik({
+  subsets: ["hebrew", "latin"],
+  variable: "--font-sans",
+  weight: ["300", "400", "500", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fontMono = Varela_Round({
   subsets: ["latin"],
+  variable: "--font-mono",
+  weight: "400",
 });
 
 export const metadata = {
@@ -18,10 +21,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="he" dir="rtl">
+      <body className={`${fontSans.variable} ${fontMono.variable} antialiased`}>
+        <Navbar />
         {children}
       </body>
     </html>
