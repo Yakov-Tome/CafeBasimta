@@ -1,6 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
-import { Rubik, Varela_Round } from "next/font/google";
+import { Rubik, Varela_Round, Secular_One } from "next/font/google";
 
 const fontSans = Rubik({
   subsets: ["hebrew", "latin"],
@@ -9,8 +9,14 @@ const fontSans = Rubik({
 });
 
 const fontMono = Varela_Round({
-  subsets: ["latin"],
+  subsets: ["hebrew", "latin"],
   variable: "--font-mono",
+  weight: "400",
+});
+
+const fontDisplay = Secular_One({
+  subsets: ["hebrew", "latin"],
+  variable: "--font-display",
   weight: "400",
 });
 
@@ -22,7 +28,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="he" dir="rtl">
-      <body className={`${fontSans.variable} ${fontMono.variable} antialiased`}>
+      <body className={`${fontSans.variable} ${fontMono.variable} ${fontDisplay.variable} antialiased`}>
         <Navbar />
         {children}
       </body>

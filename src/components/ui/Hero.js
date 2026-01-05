@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-const HERO_IMAGES = ["/Hero1.jpg", "/Hero2.jpg", "/Hero3.jpg"];
+const HERO_IMAGES = ["/hero/1.jpg", "/hero/5.jpg", "/hero/2.jpg", "/hero/6.jpg"];
 const Text = [
   { title: "קפה בסמטה", description: "קפה טוב, מאפים טריים ושקט ירוק – בתוך משתלה קסומה בנווה צדק" },
 ];
@@ -20,7 +20,7 @@ function Hero() {
 
   return (
     <div
-      className="hero min-h-[80vh] transition-[background-image] duration-700 snap-start"
+      className="hero min-h-screen transition-[background-image] duration-700 snap-start"
       style={{
         backgroundImage: `url(${HERO_IMAGES[index]})`,
         backgroundSize: "cover",
