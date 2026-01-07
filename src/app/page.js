@@ -1,13 +1,16 @@
+import SectionFour from '@/components/sections/SectionFour'
 import SectionOne from '@/components/sections/SectionOne'
+import SectionThree from '@/components/sections/SectionThree'
+import SectionTwo from '@/components/sections/SectionTwo'
 import Footer from '@/components/ui/Footer'
 import Hero from '@/components/ui/Hero'
 import React from 'react'
 
 const sections = [
   { title: 'ראשי', content: <SectionOne />, id: 'home' },
-  { title: 'אודות', content: 'Learn more About us here.', id: 'about' },
-  { title: 'שירותים', content: 'Discover our Services.', id: 'services' },
-  { title: 'צור קשר', content: 'Get in touch with us.', id: 'contact' },
+  { title: 'אודות', content: <SectionTwo />, id: 'about' },
+  { title: 'שירותים', content: <SectionThree />, id: 'services' },
+  { title: 'צור קשר', content: <SectionFour />, id: 'contact' },
 ]
 
 function Home() {
